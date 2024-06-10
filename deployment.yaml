@@ -1,3 +1,13 @@
+# deployment.yml
+
+template-file-path: the-test-gitsyn.yaml
+  parameters:
+    Prefix: 'test-gitsyn'
+  tags:
+    Project: 'test-project'
+
+# cloudformation-template.yml
+
 AWSTemplateFormatVersion: '2010-09-09'
 
 Parameters:
@@ -13,4 +23,4 @@ Resources:
         - Key: Name
           Value: !Sub "${Prefix}-vpc"
         - Key: Project
-          Value: !Ref Prefix
+          Value: !Ref Prefix    
