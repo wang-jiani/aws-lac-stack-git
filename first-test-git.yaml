@@ -9,6 +9,10 @@ Parameters:
     Description: Please enter the IP range (CIDR notation) for this VPC
     Type: String
     Default: 20.0.0.0/16
+  pubsubnet:
+    Description: Please enter the IP range (CIDR notation) for this VPC
+    Type: String
+    Default: 20.10.0.0/24    
 
 
 Resources:
