@@ -4,17 +4,13 @@ Parameters:
   EnvironmentName:
     Description: An environment name that is prefixed to resource names
     Type: String
+    Default: dev    
 
   VpcCIDR:
     Description: Please enter the IP range (CIDR notation) for this VPC
     Type: String
-    Default: 20.0.0.0/16
-  pubsubnet:
-    Description: Please enter the IP range (CIDR notation) for this VPC
-    Type: String
-    Default: 20.10.0.0/24    
-
-
+    Default: 20.0.0.0/16    
+    
 Resources:
   VPC:
     Type: AWS::EC2::VPC
