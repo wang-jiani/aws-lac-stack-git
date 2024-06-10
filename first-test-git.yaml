@@ -1,28 +1,3 @@
-AWSTemplateFormatVersion: "2010-09-09"
-
-Parameters:
-  EnvironmentName:
-    Description: An environment name that is prefixed to resource names
-    Type: String
-    Default: dev    
-
-  VpcCIDR:
-    Description: Please enter the IP range (CIDR notation) for this VPC
-    Type: String
-    Default: 20.0.0.0/16    
-    
-Resources:
-  VPC:
-    Type: AWS::EC2::VPC
-    Properties:
-      CidrBlock: !Ref VpcCIDR
-      EnableDnsSupport: true
-      EnableDnsHostnames: true
-      Tags:
-        - Key: Name
-          Value: !Ref EnvironmentName    
-
-Outputs:
-  VPC:
-    Description: A reference to the created VPC
-    Value: !Ref VPC          
+template-file-path: first-test-git.yaml
+parameters: {}
+tags: {}
