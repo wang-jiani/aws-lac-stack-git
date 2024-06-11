@@ -1,26 +1,9 @@
 # deployment.yml
 
-template-file-path: the-test-gitsyn.yaml
+template-file-path: aws-lac-stack-git
   parameters:
     Prefix: 'test-gitsyn'
   tags:
     Project: 'test-project'
 
-# cloudformation-template.yml
-
-AWSTemplateFormatVersion: '2010-09-09'
-
-Parameters:
-  Prefix:
-    Type: String
-
-Resources:
-  VPC:
-    Type: AWS::EC2::VPC
-    Properties:
-      CidrBlock: '10.1.0.0/16'
-      Tags:
-        - Key: Name
-          Value: !Sub "${Prefix}-vpc"
-        - Key: Project
-          Value: !Ref Prefix    
+   
