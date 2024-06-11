@@ -12,5 +12,3 @@ Resources:
       Tags:
         - Key: Name
           Value: !Sub "${Prefix}-vpc"
-        - Key: Project
-          Value: !Ref Prefix
