@@ -1,9 +1,3 @@
-# deployment.yml
-
-template-file-path: aws-lac-stack-git
-  parameters:
-    Prefix: 'test-gitsyn'
-  tags:
-    Project: 'test-project'
-
-   
+template-file-path: first-test-git.yaml
+parameters: {}
+tags: {}
