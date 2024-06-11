@@ -1,17 +1,3 @@
-AWSTemplateFormatVersion: '2010-09-09'
-
-Parameters:
-  Prefix:
-    Type: String
-
-
-Resources:
-  VPC:
-    Type: AWS::EC2::VPC
-    Properties:
-      CidrBlock: '10.1.0.0/16'
-      Tags:
-        - Key: Name
-          Value: !Sub "${Prefix}-vpc"
-        - Key: Project
-          Value: !Ref Prefix
+template-file-path: first-test-git.yaml
+parameters: {}
+tags: {}
