@@ -4,6 +4,7 @@ Parameters:
   Prefix:
     Type: String
 
+
 Resources:
   VPC:
     Type: AWS::EC2::VPC
@@ -12,3 +13,5 @@ Resources:
       Tags:
         - Key: Name
           Value: !Sub "${Prefix}-vpc"
+        - Key: Project
+          Value: !Ref Prefix

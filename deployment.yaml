@@ -1,3 +1,5 @@
 template-file-path: first-test-git.yaml
-parameters: {}
-tags: {}
+  parameters:
+    Prefix: 'test-prefix'
+  tags:
+    Project: 'test-Project'
