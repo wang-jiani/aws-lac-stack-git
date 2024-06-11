@@ -1,10 +1,10 @@
 template-file-path: first-test-git.yaml
 
 parameters:
-    Prefix: 'test-prefix'
-    
+    Prefix: 'test-lac-wang'
+
 tags:
-    Project: 'test-Project'
+    Project: 'test-lac'
 
 
 
