@@ -1,22 +1,20 @@
 AWSTemplateFormatVersion: '2010-09-09'
 
 Parameters:
+  Evn:
+    Type: String
   Prefix:
-    Type: String
-  VPCcidr:
-    Type: String    
-  PublicSubnetACIDR:
-    Type: String
+    Type: String   
 
 Resources:
 # VPC Create
   VPC:
     Type: AWS::EC2::VPC
     Properties:
-      CidrBlock: !Ref VPCcidr
+      CidrBlock: '10.5.0.0/16'
       Tags:
         - Key: Name
-          Value: !Sub "${Prefix}-vpc"
+          Value: !Sub "${Prefix}-${Evn}-vpc"
         - Key: Project
           Value: !Ref Prefix
 # Public SubnetA Create
@@ -24,11 +22,11 @@ Resources:
     Type: "AWS::EC2::Subnet"
     Properties: 
       AvailabilityZone: "ap-northeast-1a"
-      CidrBlock: !Ref PublicSubnetACIDR
+      CidrBlock: '10.5.10.0/24'
       VpcId: !Ref VPC 
       Tags: 
         - Key: Name
-          Value: !Sub "${Prefix}-public-subnet-a"
+          Value: !Sub "${Prefix}-${Evn}-public-subnet-a"
          
 # InternetGateway Create
   InternetGateway: 
@@ -36,4 +34,4 @@ Resources:
     Properties: 
       Tags: 
         - Key: Name
-          Value: !Sub "${Prefix}-igw"          
+          Value: !Sub "${Prefix}-${Evn}-igw"          
