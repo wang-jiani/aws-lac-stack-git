@@ -15,8 +15,8 @@ Resources:
     Properties:
       CidrBlock: '10.1.0.0/16'
       Tags:
-        - Key: Name
-          Value: !Sub "${Prefix}-vpc"
+        - Key: Named
+          Value: !Sub "${Prefix}-${Evn}-vpc"
         - Key: Project
           Value: !Ref Prefix
 # Public SubnetA Create
