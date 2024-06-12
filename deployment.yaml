@@ -1,12 +1,3 @@
-template-file-path: first-test-git.yaml
-
-parameters:
-    Prefix: 'test-lac-wang'
-    PublicSubnetACIDR: '10.1.10.0/24'
-    Evn: 'stg'
-
-tags:
-    Project: 'test-lac'
-
-
-
+template-file-path: two-test-stg.yaml
+parameters: {}
+tags: {}
